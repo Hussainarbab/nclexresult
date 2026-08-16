@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Courses - NCLEXRESULT</title>
+
+    <!-- Course CSS -->
+    <link rel="stylesheet" href="../css/course.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">N</div>
+
+            <div>
+                <h2>NCLEXRESULT</h2>
+                <span>Student Portal</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="course.html" class="nav-item active">
+                <span class="nav-icon">▣</span>
+                <span>My Courses</span>
+            </a>
+
+            <a href="grade.html" class="nav-item">
+                <span class="nav-icon">★</span>
+                <span>Results</span>
+            </a>
+
+            <a href="progress.html" class="nav-item">
+                <span class="nav-icon">◔</span>
+                <span>Attendance</span>
+            </a>
+
+            <a href="schedule.html" class="nav-item">
+                <span class="nav-icon">□</span>
+                <span>Assignments</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+            <a href="index.html" class="nav-item logout">
+                <span class="nav-icon">↪</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>My Courses</h1>
+                <p>Spring 2026 • Your enrolled courses</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    ♢
+                    <span></span>
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        H
+                    </div>
+
+                    <div>
+                        <strong>Hussain Abbas</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= COURSE STATS ================= -->
+
+        <section class="course-stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    ▣
+                </div>
+
+                <div>
+                    <span>Total Courses</span>
+                    <strong>6</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Active Courses</span>
+                    <strong>5</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ★
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong>1</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    ◷
+                </div>
+
+                <div>
+                    <span>Credit Hours</span>
+                    <strong>18</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <section class="courses-header">
+
+            <div>
+                <h2>Enrolled Courses</h2>
+                <p>Courses you are currently enrolled in.</p>
+            </div>
+
+            <select id="courseFilter">
+                <option value="all">All Courses</option>
+                <option value="active">Active</option>
+                <option value="completed">Completed</option>
+            </select>
+
+        </section>
+
+
+        <!-- ================= COURSES ================= -->
+
+        <section class="courses-grid">
+
+
+            <!-- COURSE 1 -->
+
+            <article class="course-card" data-status="active">
+
+                <div class="course-banner blue-banner">
+
+                    <span class="course-code">
+                        NURS 101
+                    </span>
+
+                    <h3>
+                        Fundamentals of Nursing
+                    </h3>
+
+                    <p>
+                        3 Credit Hours
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <div class="teacher">
+
+                        <div class="teacher-avatar">
+                            DR
+                        </div>
+
+                        <div>
+                            <strong>Dr. Sarah Ahmed</strong>
+                            <span>Course Instructor</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-progress">
+
+                        <div class="progress-heading">
+                            <span>Course Progress</span>
+                            <strong>78%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:78%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            📅 Mon & Wed
+                        </span>
+
+                        <span>
+                            ⏰ 10:00 AM
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="course-btn">
+                        Open Course →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- COURSE 2 -->
+
+            <article class="course-card" data-status="active">
+
+                <div class="course-banner purple-banner">
+
+                    <span class="course-code">
+                        NURS 202
+                    </span>
+
+                    <h3>
+                        Medical-Surgical Nursing
+                    </h3>
+
+                    <p>
+                        3 Credit Hours
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <div class="teacher">
+
+                        <div class="teacher-avatar">
+                            DR
+                        </div>
+
+                        <div>
+                            <strong>Dr. Michael Khan</strong>
+                            <span>Course Instructor</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-progress">
+
+                        <div class="progress-heading">
+                            <span>Course Progress</span>
+                            <strong>64%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:64%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            📅 Tue & Thu
+                        </span>
+
+                        <span>
+                            ⏰ 11:30 AM
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="course-btn">
+                        Open Course →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- COURSE 3 -->
+
+            <article class="course-card" data-status="active">
+
+                <div class="course-banner green-banner">
+
+                    <span class="course-code">
+                        NURS 203
+                    </span>
+
+                    <h3>
+                        Pharmacology
+                    </h3>
+
+                    <p>
+                        3 Credit Hours
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <div class="teacher">
+
+                        <div class="teacher-avatar">
+                            DR
+                        </div>
+
+                        <div>
+                            <strong>Dr. Ali Hassan</strong>
+                            <span>Course Instructor</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-progress">
+
+                        <div class="progress-heading">
+                            <span>Course Progress</span>
+                            <strong>82%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:82%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            📅 Monday
+                        </span>
+
+                        <span>
+                            ⏰ 02:00 PM
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="course-btn">
+                        Open Course →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- COURSE 4 -->
+
+            <article class="course-card" data-status="active">
+
+                <div class="course-banner orange-banner">
+
+                    <span class="course-code">
+                        NURS 204
+                    </span>
+
+                    <h3>
+                        Pathophysiology
+                    </h3>
+
+                    <p>
+                        3 Credit Hours
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <div class="teacher">
+
+                        <div class="teacher-avatar">
+                            DR
+                        </div>
+
+                        <div>
+                            <strong>Dr. Ayesha Malik</strong>
+                            <span>Course Instructor</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-progress">
+
+                        <div class="progress-heading">
+                            <span>Course Progress</span>
+                            <strong>55%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:55%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            📅 Wednesday
+                        </span>
+
+                        <span>
+                            ⏰ 09:00 AM
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="course-btn">
+                        Open Course →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- COURSE 5 -->
+
+            <article class="course-card" data-status="active">
+
+                <div class="course-banner pink-banner">
+
+                    <span class="course-code">
+                        NURS 205
+                    </span>
+
+                    <h3>
+                        Mental Health Nursing
+                    </h3>
+
+                    <p>
+                        3 Credit Hours
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <div class="teacher">
+
+                        <div class="teacher-avatar">
+                            DR
+                        </div>
+
+                        <div>
+                            <strong>Dr. Maria Khan</strong>
+                            <span>Course Instructor</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-progress">
+
+                        <div class="progress-heading">
+                            <span>Course Progress</span>
+                            <strong>71%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:71%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            📅 Friday
+                        </span>
+
+                        <span>
+                            ⏰ 01:00 PM
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="course-btn">
+                        Open Course →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- COMPLETED COURSE -->
+
+            <article class="course-card" data-status="completed">
+
+                <div class="course-banner dark-banner">
+
+                    <span class="course-code">
+                        NURS 100
+                    </span>
+
+                    <h3>
+                        Anatomy & Physiology
+                    </h3>
+
+                    <p>
+                        3 Credit Hours
+                    </p>
+
+                    <span class="completed-badge">
+                        ✓ Completed
+                    </span>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <div class="teacher">
+
+                        <div class="teacher-avatar">
+                            DR
+                        </div>
+
+                        <div>
+                            <strong>Dr. James Wilson</strong>
+                            <span>Course Instructor</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-progress">
+
+                        <div class="progress-heading">
+                            <span>Course Progress</span>
+                            <strong>100%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:100%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            ✓ Completed
+                        </span>
+
+                        <span>
+                            3 Credits
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="course-btn">
+                        View Course →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <script>
+        const filter = document.getElementById("courseFilter");
+        const courses = document.querySelectorAll(".course-card");
+
+        filter.addEventListener("change", function () {
+
+            const value = this.value;
+
+            courses.forEach(course => {
+
+                if (value === "all") {
+                    course.style.display = "block";
+                }
+
+                else if (course.dataset.status === value) {
+                    course.style.display = "block";
+                }
+
+                else {
+                    course.style.display = "none";
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - NCLEX Result</title>
+    <link rel="stylesheet" href="./css/settings.css">
+</head>
+
+<body>
+
+<div class="settings-page">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">N</div>
+            <div>
+                <strong>NCLEX</strong>
+                <span>RESULT</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="course.html">
+                <span>📚</span>
+                My Courses
+            </a>
+
+            <a href="grade.html">
+                <span>📊</span>
+                Grades
+            </a>
+
+            <a href="progress.html">
+                <span>📈</span>
+                Progress
+            </a>
+
+            <a href="attendance.html">
+                <span>✓</span>
+                Attendance
+            </a>
+
+            <a href="assignment.html">
+                <span>📝</span>
+                Assignments
+            </a>
+
+            <a href="study-material.html">
+                <span>📖</span>
+                Study Material
+            </a>
+
+            <a href="profile.html">
+                <span>👤</span>
+                Profile
+            </a>
+
+            <a href="settings.html" class="active">
+                <span>⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="logout-box">
+            <button onclick="logout()">🚪 Logout</button>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div>
+                <h1>Settings</h1>
+                <p>Manage your account and preferences</p>
+            </div>
+
+            <div class="user-area">
+
+                <div class="notification">
+                    🔔
+                    <span>2</span>
+                </div>
+
+                <div class="user">
+                    <div class="avatar">HA</div>
+
+                    <div>
+                        <strong id="userName">Hussain Abbas</strong>
+                        <small>Student</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Settings Container -->
+        <section class="settings-container">
+
+            <!-- Account Settings -->
+            <div class="settings-card">
+
+                <div class="card-title">
+                    <div class="title-icon">👤</div>
+
+                    <div>
+                        <h2>Account Settings</h2>
+                        <p>Update your personal account information</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input
+                            type="text"
+                            id="phone"
+                            placeholder="Enter phone number"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Student ID</label>
+                        <input
+                            type="text"
+                            id="studentId"
+                            placeholder="Student ID"
+                        >
+                    </div>
+
+                </div>
+
+                <button class="save-btn" onclick="saveProfile()">
+                    Save Changes
+                </button>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="settings-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">🔒</div>
+
+                    <div>
+                        <h2>Change Password</h2>
+                        <p>Keep your account secure</p>
+                    </div>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+                        <label>Current Password</label>
+
+                        <input
+                            type="password"
+                            id="currentPassword"
+                            placeholder="Enter current password"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>New Password</label>
+
+                        <input
+                            type="password"
+                            id="newPassword"
+                            placeholder="Enter new password"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm new password"
+                        >
+                    </div>
+
+                </div>
+
+                <button class="save-btn" onclick="changePassword()">
+                    Update Password
+                </button>
+
+            </div>
+
+
+            <!-- Notifications -->
+            <div class="settings-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">🔔</div>
+
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Choose how you want to receive notifications</p>
+                    </div>
+
+                </div>
+
+
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Email Notifications</strong>
+                        <p>Receive important updates through email</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+
+                </div>
+
+
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Assignment Notifications</strong>
+                        <p>Get notified about new assignments</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+
+                </div>
+
+
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Result Notifications</strong>
+                        <p>Receive notifications when results are published</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+
+                </div>
+
+
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Attendance Alerts</strong>
+                        <p>Get alerts about attendance</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Appearance -->
+            <div class="settings-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">🎨</div>
+
+                    <div>
+                        <h2>Appearance</h2>
+                        <p>Customize your dashboard experience</p>
+                    </div>
+
+                </div>
+
+                <div class="theme-options">
+
+                    <button class="theme active" onclick="setTheme('light')">
+                        ☀️
+                        <strong>Light</strong>
+                    </button>
+
+                    <button class="theme" onclick="setTheme('dark')">
+                        🌙
+                        <strong>Dark</strong>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Danger Zone -->
+            <div class="settings-card danger-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon danger-icon">⚠</div>
+
+                    <div>
+                        <h2>Account Actions</h2>
+                        <p>Manage your account</p>
+                    </div>
+
+                </div>
+
+                <button class="logout-button" onclick="logout()">
+                    Logout from Account
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+function saveProfile() {
+
+    const name = document.getElementById("fullName").value;
+
+    if (!name) {
+        alert("Please enter your name.");
+        return;
+    }
+
+    localStorage.setItem("userName", name);
+
+    document.getElementById("userName").textContent = name;
+
+    alert("Profile updated successfully!");
+}
+
+
+function changePassword() {
+
+    const current =
+        document.getElementById("currentPassword").value;
+
+    const newPassword =
+        document.getElementById("newPassword").value;
+
+    const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+
+    if (!current || !newPassword || !confirmPassword) {
+
+        alert("Please fill all password fields.");
+
+        return;
+    }
+
+
+    if (newPassword !== confirmPassword) {
+
+        alert("New passwords do not match.");
+
+        return;
+    }
+
+
+    if (newPassword.length < 8) {
+
+        alert("Password must contain at least 8 characters.");
+
+        return;
+    }
+
+
+    alert("Password updated successfully!");
+
+    document.getElementById("currentPassword").value = "";
+    document.getElementById("newPassword").value = "";
+    document.getElementById("confirmPassword").value = "";
+}
+
+
+function setTheme(theme) {
+
+    const themes = document.querySelectorAll(".theme");
+
+    themes.forEach(item => {
+        item.classList.remove("active");
+    });
+
+
+    event.currentTarget.classList.add("active");
+
+
+    if (theme === "dark") {
+
+        document.body.classList.add("dark-mode");
+
+    } else {
+
+        document.body.classList.remove("dark-mode");
+
+    }
+}
+
+
+function logout() {
+
+    const confirmLogout =
+        confirm("Are you sure you want to logout?");
+
+    if (confirmLogout) {
+
+        localStorage.removeItem("userName");
+
+        window.location.href = "../login.html";
+    }
+}
+
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const savedName =
+        localStorage.getItem("userName");
+
+    if (savedName) {
+
+        document.getElementById("fullName").value =
+            savedName;
+
+        document.getElementById("userName").textContent =
+            savedName;
+    }
+
+});
+
+</script>
+
+</body>
+</html>

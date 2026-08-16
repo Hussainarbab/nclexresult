@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignments | NCLEX Result</title>
+
+    <link rel="stylesheet" href="./css/assignments.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>NCLEX<span>Result</span></h2>
+                <p>Student Portal</p>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN MENU</p>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-grid-2"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="course.html">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+
+            <a href="grades.html">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Grades</span>
+            </a>
+
+            <a href="progress.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+
+            <a href="attendance.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="assignments.html" class="active">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+
+            <a href="study-material.html">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Study Material</span>
+            </a>
+
+
+            <p class="menu-title second-title">ACCOUNT</p>
+
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="student-mini">
+
+                <div class="student-avatar">
+                    HA
+                </div>
+
+                <div>
+                    <strong>Hussain Abbas</strong>
+                    <small>Student</small>
+                </div>
+
+            </div>
+
+            <button class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+                <button class="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h1>Assignments</h1>
+                <p>View and manage your assignments</p>
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </button>
+
+                <div class="top-profile">
+
+                    <div class="top-avatar">
+                        HA
+                    </div>
+
+                    <div>
+                        <strong>Hussain Abbas</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="page-content">
+
+
+            <!-- STATISTICS -->
+
+            <div class="assignment-stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Assignments</span>
+                        <strong>24</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Completed</span>
+                        <strong>18</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Pending</span>
+                        <strong>4</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-calendar-xmark"></i>
+                    </div>
+
+                    <div>
+                        <span>Overdue</span>
+                        <strong>2</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTER -->
+
+            <div class="assignment-header">
+
+                <div>
+                    <h2>My Assignments</h2>
+                    <p>Keep track of your academic tasks</p>
+                </div>
+
+                <div class="filters">
+
+                    <select>
+                        <option>All Courses</option>
+                        <option>NCLEX-RN Preparation</option>
+                        <option>Pharmacology</option>
+                        <option>Medical Surgical</option>
+                    </select>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Completed</option>
+                        <option>Pending</option>
+                        <option>Overdue</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ASSIGNMENT TABLE -->
+
+            <div class="assignment-card">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Assignment</th>
+                                <th>Course</th>
+                                <th>Due Date</th>
+                                <th>Marks</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="assignment-name">
+
+                                        <div class="assignment-icon">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Pharmacology Quiz</strong>
+                                            <small>Assignment #24</small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Pharmacology</td>
+
+                                <td>Aug 18, 2026</td>
+
+                                <td>18 / 20</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="assignment-name">
+
+                                        <div class="assignment-icon purple">
+                                            <i class="fa-solid fa-book"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Medical Surgical Case Study</strong>
+                                            <small>Assignment #23</small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Medical Surgical</td>
+
+                                <td>Aug 20, 2026</td>
+
+                                <td>—</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="submit-btn">
+                                        Submit
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="assignment-name">
+
+                                        <div class="assignment-icon green">
+                                            <i class="fa-solid fa-notes-medical"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Patient Care Plan</strong>
+                                            <small>Assignment #22</small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Fundamentals</td>
+
+                                <td>Aug 22, 2026</td>
+
+                                <td>—</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="submit-btn">
+                                        Submit
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="assignment-name">
+
+                                        <div class="assignment-icon red">
+                                            <i class="fa-solid fa-triangle-exclamation"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>NCLEX Practice Test</strong>
+                                            <small>Assignment #21</small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>NCLEX Preparation</td>
+
+                                <td>Aug 12, 2026</td>
+
+                                <td>—</td>
+
+                                <td>
+                                    <span class="status overdue">
+                                        Overdue
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="assignment-name">
+
+                                        <div class="assignment-icon">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Health Assessment</strong>
+                                            <small>Assignment #20</small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Health Assessment</td>
+
+                                <td>Aug 10, 2026</td>
+
+                                <td>19 / 20</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- UPCOMING -->
+
+            <div class="bottom-grid">
+
+                <div class="upcoming-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <h3>Upcoming Assignments</h3>
+                            <p>Assignments due soon</p>
+                        </div>
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+
+                    <div class="upcoming-item">
+
+                        <div class="date-box">
+                            <strong>20</strong>
+                            <span>AUG</span>
+                        </div>
+
+                        <div>
+                            <strong>Medical Surgical Case Study</strong>
+                            <p>Medical Surgical</p>
+                        </div>
+
+                        <span class="days-left">2 days</span>
+
+                    </div>
+
+
+                    <div class="upcoming-item">
+
+                        <div class="date-box">
+                            <strong>22</strong>
+                            <span>AUG</span>
+                        </div>
+
+                        <div>
+                            <strong>Patient Care Plan</strong>
+                            <p>Fundamentals</p>
+                        </div>
+
+                        <span class="days-left">4 days</span>
+
+                    </div>
+
+
+                    <div class="upcoming-item">
+
+                        <div class="date-box">
+                            <strong>25</strong>
+                            <span>AUG</span>
+                        </div>
+
+                        <div>
+                            <strong>NCLEX Mock Test</strong>
+                            <p>NCLEX Preparation</p>
+                        </div>
+
+                        <span class="days-left">7 days</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPLETION -->
+
+                <div class="completion-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <h3>Assignment Completion</h3>
+                            <p>Your overall progress</p>
+                        </div>
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+
+                    <div class="completion-circle">
+
+                        <div>
+                            <strong>75%</strong>
+                            <span>Completed</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="completion-info">
+
+                        <div>
+                            <span class="dot completed-dot"></span>
+                            Completed
+                            <strong>18</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot pending-dot"></span>
+                            Pending
+                            <strong>4</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot overdue-dot"></span>
+                            Overdue
+                            <strong>2</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    // Mobile menu
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (mobileMenu) {
+
+        mobileMenu.addEventListener("click", () => {
+            sidebar.classList.toggle("show");
+        });
+
+    }
+
+
+    // Logout demo
+    const logoutBtn = document.querySelector(".logout-btn");
+
+    if (logoutBtn) {
+
+        logoutBtn.addEventListener("click", () => {
+
+            const confirmLogout =
+                confirm("Are you sure you want to logout?");
+
+            if (confirmLogout) {
+                window.location.href = "../login.html";
+            }
+
+        });
+
+    }
+
+</script>
+
+</body>
+</html>

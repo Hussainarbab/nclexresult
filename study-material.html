@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Material | NCLEX Result</title>
+
+    <link rel="stylesheet" href="./css/study-material.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">N</div>
+
+            <div>
+                <strong>NCLEX</strong>
+                <span>RESULT</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <span>▣</span>
+                Dashboard
+            </a>
+
+            <a href="course.html">
+                <span>📚</span>
+                My Courses
+            </a>
+
+            <a href="grade.html">
+                <span>▤</span>
+                Grades
+            </a>
+
+            <a href="progress.html">
+                <span>◔</span>
+                Progress
+            </a>
+
+            <a href="attendance.html">
+                <span>✓</span>
+                Attendance
+            </a>
+
+            <a href="assignment.html">
+                <span>📝</span>
+                Assignments
+            </a>
+
+            <a href="study-material.html" class="active">
+                <span>📖</span>
+                Study Material
+            </a>
+
+            <a href="profile.html">
+                <span>👤</span>
+                Profile
+            </a>
+
+            <a href="settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                <span>❓</span>
+                Help & Support
+            </a>
+
+            <a href="login.html" class="logout">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Study Material</h1>
+                <p>Access your learning resources and study materials.</p>
+            </div>
+
+            <div class="user-area">
+
+                <button class="notification">
+                    🔔
+                    <span></span>
+                </button>
+
+                <div class="user-info">
+
+                    <div class="avatar">
+                        H
+                    </div>
+
+                    <div>
+                        <strong>Hussain Abbas</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content">
+
+            <!-- SEARCH -->
+
+            <div class="search-section">
+
+                <div class="search-box">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        id="searchMaterial"
+                        placeholder="Search study materials..."
+                    >
+
+                </div>
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="nclex">
+                        NCLEX Preparation
+                    </option>
+
+                    <option value="nursing">
+                        Nursing
+                    </option>
+
+                    <option value="medical">
+                        Medical
+                    </option>
+
+                    <option value="practice">
+                        Practice Tests
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ================= CATEGORIES ================= -->
+
+            <div class="category-cards">
+
+                <div class="category-card blue">
+
+                    <div class="category-icon">
+                        📚
+                    </div>
+
+                    <div>
+                        <h3>NCLEX Preparation</h3>
+                        <p>12 Materials</p>
+                    </div>
+
+                </div>
+
+
+                <div class="category-card purple">
+
+                    <div class="category-icon">
+                        🩺
+                    </div>
+
+                    <div>
+                        <h3>Nursing Resources</h3>
+                        <p>18 Materials</p>
+                    </div>
+
+                </div>
+
+
+                <div class="category-card green">
+
+                    <div class="category-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <h3>Practice Tests</h3>
+                        <p>25 Materials</p>
+                    </div>
+
+                </div>
+
+
+                <div class="category-card orange">
+
+                    <div class="category-icon">
+                        🎥
+                    </div>
+
+                    <div>
+                        <h3>Video Lessons</h3>
+                        <p>10 Materials</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MATERIAL HEADER ================= -->
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Available Materials</h2>
+
+                    <p>
+                        Browse and download your course resources.
+                    </p>
+
+                </div>
+
+                <button class="view-button">
+                    View All
+                </button>
+
+            </div>
+
+
+            <!-- ================= MATERIAL GRID ================= -->
+
+            <div class="material-grid" id="materialGrid">
+
+
+                <!-- MATERIAL 1 -->
+
+                <article
+                    class="material-card"
+                    data-category="nclex"
+                >
+
+                    <div class="material-top">
+
+                        <div class="file-icon pdf">
+                            PDF
+                        </div>
+
+                        <button class="more-btn">
+                            ⋮
+                        </button>
+
+                    </div>
+
+                    <div class="material-body">
+
+                        <span class="material-category">
+                            NCLEX Preparation
+                        </span>
+
+                        <h3>
+                            NCLEX-RN Complete Study Guide
+                        </h3>
+
+                        <p>
+                            Complete preparation guide covering
+                            important NCLEX-RN concepts.
+                        </p>
+
+                        <div class="material-info">
+
+                            <span>📄 PDF</span>
+
+                            <span>12.5 MB</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="material-footer">
+
+                        <span>
+                            Updated Aug 12, 2026
+                        </span>
+
+                        <button
+                            class="download-btn"
+                            onclick="downloadMaterial('NCLEX-RN Complete Study Guide')"
+                        >
+                            ↓ Download
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 2 -->
+
+                <article
+                    class="material-card"
+                    data-category="nursing"
+                >
+
+                    <div class="material-top">
+
+                        <div class="file-icon doc">
+                            DOC
+                        </div>
+
+                        <button class="more-btn">
+                            ⋮
+                        </button>
+
+                    </div>
+
+                    <div class="material-body">
+
+                        <span class="material-category">
+                            Nursing
+                        </span>
+
+                        <h3>
+                            Fundamentals of Nursing
+                        </h3>
+
+                        <p>
+                            Essential nursing concepts and
+                            fundamentals for students.
+                        </p>
+
+                        <div class="material-info">
+
+                            <span>📄 DOC</span>
+
+                            <span>8.2 MB</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="material-footer">
+
+                        <span>
+                            Updated Aug 10, 2026
+                        </span>
+
+                        <button
+                            class="download-btn"
+                            onclick="downloadMaterial('Fundamentals of Nursing')"
+                        >
+                            ↓ Download
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 3 -->
+
+                <article
+                    class="material-card"
+                    data-category="practice"
+                >
+
+                    <div class="material-top">
+
+                        <div class="file-icon test">
+                            TEST
+                        </div>
+
+                        <button class="more-btn">
+                            ⋮
+                        </button>
+
+                    </div>
+
+                    <div class="material-body">
+
+                        <span class="material-category">
+                            Practice Tests
+                        </span>
+
+                        <h3>
+                            NCLEX Practice Questions
+                        </h3>
+
+                        <p>
+                            Practice questions to improve your
+                            NCLEX examination preparation.
+                        </p>
+
+                        <div class="material-info">
+
+                            <span>📝 Questions</span>
+
+                            <span>150 Questions</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="material-footer">
+
+                        <span>
+                            Updated Aug 08, 2026
+                        </span>
+
+                        <button
+                            class="download-btn"
+                            onclick="startPracticeTest()"
+                        >
+                            Start Test
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 4 -->
+
+                <article
+                    class="material-card"
+                    data-category="medical"
+                >
+
+                    <div class="material-top">
+
+                        <div class="file-icon pdf">
+                            PDF
+                        </div>
+
+                        <button class="more-btn">
+                            ⋮
+                        </button>
+
+                    </div>
+
+                    <div class="material-body">
+
+                        <span class="material-category">
+                            Medical
+                        </span>
+
+                        <h3>
+                            Pharmacology Notes
+                        </h3>
+
+                        <p>
+                            Important pharmacology notes and
+                            medication concepts.
+                        </p>
+
+                        <div class="material-info">
+
+                            <span>📄 PDF</span>
+
+                            <span>6.8 MB</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="material-footer">
+
+                        <span>
+                            Updated Aug 05, 2026
+                        </span>
+
+                        <button
+                            class="download-btn"
+                            onclick="downloadMaterial('Pharmacology Notes')"
+                        >
+                            ↓ Download
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 5 -->
+
+                <article
+                    class="material-card"
+                    data-category="nclex"
+                >
+
+                    <div class="material-top">
+
+                        <div class="file-icon video">
+                            ▶
+                        </div>
+
+                        <button class="more-btn">
+                            ⋮
+                        </button>
+
+                    </div>
+
+                    <div class="material-body">
+
+                        <span class="material-category">
+                            NCLEX Preparation
+                        </span>
+
+                        <h3>
+                            NCLEX Strategy Video Lessons
+                        </h3>
+
+                        <p>
+                            Video lessons covering strategies
+                            for answering NCLEX questions.
+                        </p>
+
+                        <div class="material-info">
+
+                            <span>🎥 Video</span>
+
+                            <span>45 Minutes</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="material-footer">
+
+                        <span>
+                            Updated Aug 02, 2026
+                        </span>
+
+                        <button
+                            class="download-btn"
+                            onclick="watchVideo()"
+                        >
+                            ▶ Watch
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 6 -->
+
+                <article
+                    class="material-card"
+                    data-category="practice"
+                >
+
+                    <div class="material-top">
+
+                        <div class="file-icon test">
+                            QUIZ
+                        </div>
+
+                        <button class="more-btn">
+                            ⋮
+                        </button>
+
+                    </div>
+
+                    <div class="material-body">
+
+                        <span class="material-category">
+                            Practice Tests
+                        </span>
+
+                        <h3>
+                            Medical-Surgical Quiz
+                        </h3>
+
+                        <p>
+                            Test your knowledge with this
+                            medical-surgical nursing quiz.
+                        </p>
+
+                        <div class="material-info">
+
+                            <span>📝 Quiz</span>
+
+                            <span>50 Questions</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="material-footer">
+
+                        <span>
+                            Updated Jul 30, 2026
+                        </span>
+
+                        <button
+                            class="download-btn"
+                            onclick="startPracticeTest()"
+                        >
+                            Start Quiz
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- EMPTY MESSAGE -->
+
+            <div
+                id="noResults"
+                class="no-results"
+                style="display:none;"
+            >
+
+                <div>📚</div>
+
+                <h3>No materials found</h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById("searchMaterial");
+
+        const categoryFilter =
+            document.getElementById("categoryFilter");
+
+        const materialCards =
+            document.querySelectorAll(".material-card");
+
+        const noResults =
+            document.getElementById("noResults");
+
+
+        function filterMaterials() {
+
+            const search =
+                searchInput.value.toLowerCase().trim();
+
+            const category =
+                categoryFilter.value;
+
+            let visibleCount = 0;
+
+
+            materialCards.forEach(card => {
+
+                const text =
+                    card.innerText.toLowerCase();
+
+                const cardCategory =
+                    card.dataset.category;
+
+
+                const matchesSearch =
+                    text.includes(search);
+
+                const matchesCategory =
+                    category === "all" ||
+                    cardCategory === category;
+
+
+                if (
+                    matchesSearch &&
+                    matchesCategory
+                ) {
+
+                    card.style.display = "flex";
+
+                    visibleCount++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            if (visibleCount === 0) {
+
+                noResults.style.display = "block";
+
+            } else {
+
+                noResults.style.display = "none";
+
+            }
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            filterMaterials
+        );
+
+
+        categoryFilter.addEventListener(
+            "change",
+            filterMaterials
+        );
+
+
+        function downloadMaterial(name) {
+
+            alert(
+                "Demo: Downloading " +
+                name
+            );
+
+        }
+
+
+        function startPracticeTest() {
+
+            alert(
+                "Demo: Practice test will open here."
+            );
+
+        }
+
+
+        function watchVideo() {
+
+            alert(
+                "Demo: Video lesson will open here."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>

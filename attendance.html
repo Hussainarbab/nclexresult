@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance | NCLEX Result</title>
+
+    <link rel="stylesheet" href="css/attendance.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+        <div class="logo-icon">N</div>
+
+        <div>
+            <strong>NCLEX</strong>
+            <span>RESULT</span>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a href="course.html">
+            <span>▣</span>
+            My Courses
+        </a>
+
+        <a href="grades.html">
+            <span>▤</span>
+            Grades
+        </a>
+
+        <a href="progress.html">
+            <span>◔</span>
+            Progress
+        </a>
+
+        <a href="attendance.html" class="active">
+            <span>✓</span>
+            Attendance
+        </a>
+
+        <a href="assignments.html">
+            <span>☑</span>
+            Assignments
+        </a>
+
+        <a href="study-material.html">
+            <span>▤</span>
+            Study Material
+        </a>
+
+        <a href="results.html">
+            <span>🏆</span>
+            Results
+        </a>
+
+        <div class="sidebar-title">
+            ACCOUNT
+        </div>
+
+        <a href="profile.html">
+            <span>◯</span>
+            Profile
+        </a>
+
+        <a href="settings.html">
+            <span>⚙</span>
+            Settings
+        </a>
+
+        <a href="index.html" class="logout">
+            <span>↪</span>
+            Logout
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div>
+            <h1>Attendance</h1>
+            <p>Track your class attendance and attendance history.</p>
+        </div>
+
+        <div class="user-area">
+
+            <div class="notification">
+                🔔
+                <span>2</span>
+            </div>
+
+            <div class="user-profile">
+
+                <div class="avatar">
+                    HA
+                </div>
+
+                <div class="user-info">
+                    <strong>Hussain Abbas</strong>
+                    <small>Student</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= ATTENDANCE OVERVIEW ================= -->
+
+    <section class="attendance-overview">
+
+        <div class="attendance-card total">
+
+            <div class="card-icon">
+                📊
+            </div>
+
+            <div>
+                <span>Total Classes</span>
+                <h2>120</h2>
+                <small>This semester</small>
+            </div>
+
+        </div>
+
+
+        <div class="attendance-card present">
+
+            <div class="card-icon">
+                ✓
+            </div>
+
+            <div>
+                <span>Present</span>
+                <h2>105</h2>
+                <small>87.5% attendance</small>
+            </div>
+
+        </div>
+
+
+        <div class="attendance-card absent">
+
+            <div class="card-icon">
+                ✕
+            </div>
+
+            <div>
+                <span>Absent</span>
+                <h2>10</h2>
+                <small>8.3% of classes</small>
+            </div>
+
+        </div>
+
+
+        <div class="attendance-card late">
+
+            <div class="card-icon">
+                ⏱
+            </div>
+
+            <div>
+                <span>Late</span>
+                <h2>5</h2>
+                <small>4.2% of classes</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ATTENDANCE PERCENTAGE ================= -->
+
+    <section class="attendance-main">
+
+        <div class="attendance-summary">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Overall Attendance</h2>
+                    <p>Your attendance performance this semester.</p>
+                </div>
+
+                <select id="semesterSelect">
+                    <option>Fall 2026</option>
+                    <option>Spring 2026</option>
+                    <option>Fall 2025</option>
+                </select>
+
+            </div>
+
+
+            <div class="percentage-container">
+
+                <div class="circle-progress">
+
+                    <div class="circle-inner">
+                        <strong>87.5%</strong>
+                        <span>Attendance</span>
+                    </div>
+
+                </div>
+
+                <div class="attendance-status">
+
+                    <h3>Good Attendance</h3>
+
+                    <p>
+                        Your attendance is above the required
+                        minimum of 75%.
+                    </p>
+
+                    <div class="status-bar">
+
+                        <div></div>
+
+                    </div>
+
+                    <div class="status-labels">
+
+                        <span>0%</span>
+                        <span>75% Required</span>
+                        <span>100%</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MONTHLY ATTENDANCE ================= -->
+
+        <div class="monthly-card">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Monthly Attendance</h2>
+                    <p>Attendance overview by month.</p>
+                </div>
+
+            </div>
+
+            <div class="month-list">
+
+                <div class="month-row">
+
+                    <span>January</span>
+
+                    <div class="mini-progress">
+                        <div style="width: 92%;"></div>
+                    </div>
+
+                    <strong>92%</strong>
+
+                </div>
+
+
+                <div class="month-row">
+
+                    <span>February</span>
+
+                    <div class="mini-progress">
+                        <div style="width: 88%;"></div>
+                    </div>
+
+                    <strong>88%</strong>
+
+                </div>
+
+
+                <div class="month-row">
+
+                    <span>March</span>
+
+                    <div class="mini-progress">
+                        <div style="width: 91%;"></div>
+                    </div>
+
+                    <strong>91%</strong>
+
+                </div>
+
+
+                <div class="month-row">
+
+                    <span>April</span>
+
+                    <div class="mini-progress">
+                        <div style="width: 84%;"></div>
+                    </div>
+
+                    <strong>84%</strong>
+
+                </div>
+
+
+                <div class="month-row">
+
+                    <span>May</span>
+
+                    <div class="mini-progress">
+                        <div style="width: 87%;"></div>
+                    </div>
+
+                    <strong>87%</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SUBJECT ATTENDANCE ================= -->
+
+    <section class="content-card">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Subject-wise Attendance</h2>
+                <p>Attendance performance for each subject.</p>
+            </div>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Subject</th>
+                        <th>Total Classes</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                        <th>Late</th>
+                        <th>Attendance</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <div class="subject-name">
+                                <div class="subject-icon blue">RN</div>
+
+                                <div>
+                                    <strong>RN Fundamentals</strong>
+                                    <small>NCLEX-RN</small>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>30</td>
+                        <td>27</td>
+                        <td>2</td>
+                        <td>1</td>
+
+                        <td>
+                            <div class="table-progress">
+                                <div style="width:90%;"></div>
+                            </div>
+
+                            <span class="percentage">90%</span>
+                        </td>
+
+                        <td>
+                            <span class="status good">Good</span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <div class="subject-name">
+
+                                <div class="subject-icon purple">
+                                    PH
+                                </div>
+
+                                <div>
+                                    <strong>Pharmacology</strong>
+                                    <small>NCLEX-RN</small>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>25</td>
+                        <td>21</td>
+                        <td>3</td>
+                        <td>1</td>
+
+                        <td>
+
+                            <div class="table-progress">
+                                <div style="width:84%;"></div>
+                            </div>
+
+                            <span class="percentage">84%</span>
+
+                        </td>
+
+                        <td>
+                            <span class="status good">Good</span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="subject-name">
+
+                                <div class="subject-icon orange">
+                                    PE
+                                </div>
+
+                                <div>
+                                    <strong>Pediatric Nursing</strong>
+                                    <small>NCLEX-RN</small>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>20</td>
+                        <td>16</td>
+                        <td>3</td>
+                        <td>1</td>
+
+                        <td>
+
+                            <div class="table-progress">
+                                <div style="width:80%;"></div>
+                            </div>
+
+                            <span class="percentage">80%</span>
+
+                        </td>
+
+                        <td>
+                            <span class="status good">Good</span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="subject-name">
+
+                                <div class="subject-icon green">
+                                    MH
+                                </div>
+
+                                <div>
+                                    <strong>Mental Health Nursing</strong>
+                                    <small>NCLEX-RN</small>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>25</td>
+                        <td>19</td>
+                        <td>5</td>
+                        <td>1</td>
+
+                        <td>
+
+                            <div class="table-progress">
+                                <div style="width:76%;"></div>
+                            </div>
+
+                            <span class="percentage">76%</span>
+
+                        </td>
+
+                        <td>
+                            <span class="status warning">Warning</span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="subject-name">
+
+                                <div class="subject-icon red">
+                                    AC
+                                </div>
+
+                                <div>
+                                    <strong>Adult Care</strong>
+                                    <small>NCLEX-RN</small>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>20</td>
+                        <td>17</td>
+                        <td>2</td>
+                        <td>1</td>
+
+                        <td>
+
+                            <div class="table-progress">
+                                <div style="width:85%;"></div>
+                            </div>
+
+                            <span class="percentage">85%</span>
+
+                        </td>
+
+                        <td>
+                            <span class="status good">Good</span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ATTENDANCE HISTORY ================= -->
+
+    <section class="content-card">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Attendance History</h2>
+                <p>Recent attendance records.</p>
+            </div>
+
+            <button class="filter-button">
+                Filter
+            </button>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Date</th>
+                        <th>Subject</th>
+                        <th>Class</th>
+                        <th>Check-in</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Aug 15, 2026</td>
+
+                        <td>RN Fundamentals</td>
+
+                        <td>Morning</td>
+
+                        <td>08:55 AM</td>
+
+                        <td>
+                            <span class="attendance-status present-status">
+                                Present
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Aug 14, 2026</td>
+
+                        <td>Pharmacology</td>
+
+                        <td>Morning</td>
+
+                        <td>09:02 AM</td>
+
+                        <td>
+                            <span class="attendance-status late-status">
+                                Late
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Aug 13, 2026</td>
+
+                        <td>Pediatric Nursing</td>
+
+                        <td>Afternoon</td>
+
+                        <td>01:00 PM</td>
+
+                        <td>
+                            <span class="attendance-status present-status">
+                                Present
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Aug 12, 2026</td>
+
+                        <td>Mental Health Nursing</td>
+
+                        <td>Morning</td>
+
+                        <td>—</td>
+
+                        <td>
+                            <span class="attendance-status absent-status">
+                                Absent
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Aug 11, 2026</td>
+
+                        <td>Adult Care</td>
+
+                        <td>Morning</td>
+
+                        <td>08:48 AM</td>
+
+                        <td>
+                            <span class="attendance-status present-status">
+                                Present
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 NCLEX Result. All rights reserved.
+        </p>
+
+    </footer>
+
+</main>
+
+
+<script>
+
+    const semesterSelect =
+        document.getElementById("semesterSelect");
+
+    semesterSelect.addEventListener("change", function () {
+
+        console.log(
+            "Selected semester:",
+            this.value
+        );
+
+    });
+
+</script>
+
+</body>
+</html>

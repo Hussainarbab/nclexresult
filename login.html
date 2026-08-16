@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | NCLEX Result</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Your Supabase Configuration -->
+    <script src="js/supabase.js"></script>
+
+
+    <style>
+
+        .auth-page {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    #eef1ff,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 90%,
+                    #f2edff,
+                    transparent 30%
+                ),
+                #f7f9fd;
+        }
+
+
+        .auth-wrapper {
+            width: min(1050px, 100%);
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            background: #ffffff;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 70px
+                rgba(25, 40, 80, 0.12);
+        }
+
+
+        /* ================= LEFT SIDE ================= */
+
+        .auth-info {
+            padding: 55px 45px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #263f9b,
+                    #7046d9
+                );
+        }
+
+
+        .auth-info .logo {
+            color: #ffffff;
+        }
+
+
+        .auth-info h1 {
+            margin-top: 70px;
+
+            font-size: 42px;
+
+            line-height: 1.15;
+        }
+
+
+        .auth-info > p {
+            margin-top: 20px;
+
+            color: #dfe5ff;
+
+            font-size: 15px;
+        }
+
+
+        .benefits {
+            margin-top: 35px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 17px;
+        }
+
+
+        .benefit {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #eef1ff;
+
+            font-size: 14px;
+        }
+
+
+        .benefit-icon {
+            width: 30px;
+            height: 30px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, 0.15);
+        }
+
+
+        /* ================= RIGHT SIDE ================= */
+
+        .auth-form {
+            padding: 55px;
+        }
+
+
+        .back-home {
+            display: block;
+
+            margin-bottom: 28px;
+
+            color: #667085;
+
+            font-size: 13px;
+        }
+
+
+        .back-home:hover {
+            color: #4263eb;
+        }
+
+
+        .auth-form h2 {
+            font-size: 30px;
+
+            color: #17233c;
+        }
+
+
+        .auth-subtitle {
+            margin-top: 7px;
+
+            color: #7a8498;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .form-group {
+            margin-top: 23px;
+        }
+
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #303b54;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="text"] {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #dce1eb;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            color: #17233c;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+
+        .form-group input:focus {
+
+            border-color: #4263eb;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(66, 99, 235, 0.10);
+        }
+
+
+        /* ================= PASSWORD ROW ================= */
+
+        .password-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 8px;
+        }
+
+
+        .password-row label {
+            margin: 0;
+        }
+
+
+        .forgot-password {
+
+            color: #4263eb;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+        }
+
+
+        /* ================= SHOW PASSWORD ================= */
+
+        .show-password {
+
+            display: flex !important;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 12px;
+
+            color: #7a8498 !important;
+
+            font-size: 12px !important;
+
+            font-weight: 400 !important;
+
+            cursor: pointer;
+        }
+
+
+        .show-password input {
+
+            width: auto !important;
+
+            margin: 0;
+        }
+
+
+        /* ================= MESSAGE ================= */
+
+        .auth-message {
+
+            display: none;
+
+            margin-top: 18px;
+
+            padding: 12px 14px;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        .auth-message.error {
+
+            display: block;
+
+            color: #b42318;
+
+            background: #fef3f2;
+
+            border: 1px solid #fecdca;
+        }
+
+
+        .auth-message.success {
+
+            display: block;
+
+            color: #027a48;
+
+            background: #ecfdf3;
+
+            border: 1px solid #abefc6;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .login-button {
+
+            width: 100%;
+
+            margin-top: 28px;
+
+            padding: 14px;
+
+            border: 0;
+
+            border-radius: 9px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #4263eb,
+                    #7549e8
+                );
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .login-button:hover {
+
+            opacity: 0.92;
+
+            transform: translateY(-1px);
+        }
+
+
+        .login-button:disabled {
+
+            opacity: 0.65;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* ================= DIVIDER ================= */
+
+        .divider {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 25px 0;
+
+            color: #a0a7b6;
+
+            font-size: 12px;
+        }
+
+
+        .divider::before,
+        .divider::after {
+
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #e8ebf1;
+        }
+
+
+        /* ================= REGISTER ================= */
+
+        .auth-footer {
+
+            text-align: center;
+
+            color: #7a8498;
+
+            font-size: 13px;
+        }
+
+
+        .auth-footer a {
+
+            color: #4263eb;
+
+            font-weight: 700;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            .auth-wrapper {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .auth-info {
+
+                display: none;
+            }
+
+
+            .auth-form {
+
+                padding: 40px 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<main class="auth-page">
+
+
+    <div class="auth-wrapper">
+
+
+        <!-- ================= LEFT ================= -->
+
+        <section class="auth-info">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-box">
+                    N
+                </span>
+
+                <span>
+                    NCLEX<span class="logo-light">
+                        RESULT
+                    </span>
+                </span>
+
+            </a>
+
+
+            <h1>
+
+                Welcome
+                back.
+
+            </h1>
+
+
+            <p>
+
+                Sign in to access your courses,
+                academic results, progress and
+                student dashboard.
+
+            </p>
+
+
+            <div class="benefits">
+
+
+                <div class="benefit">
+
+                    <span class="benefit-icon">
+                        ✓
+                    </span>
+
+                    Access your courses
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <span class="benefit-icon">
+                        ✓
+                    </span>
+
+                    View your grades
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <span class="benefit-icon">
+                        ✓
+                    </span>
+
+                    Track your progress
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <span class="benefit-icon">
+                        ✓
+                    </span>
+
+                    Manage your profile
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= LOGIN ================= -->
+
+        <section class="auth-form">
+
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                ← Back to Home
+
+            </a>
+
+
+            <h2>
+                Welcome Back
+            </h2>
+
+
+            <p class="auth-subtitle">
+
+                Sign in to continue to your account.
+
+            </p>
+
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+
+                    <div class="password-row">
+
+                        <label for="password">
+
+                            Password
+
+                        </label>
+
+
+                        <a
+                            href="#"
+                            class="forgot-password"
+                            id="forgotPassword"
+                        >
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+
+                    <label class="show-password">
+
+                        <input
+                            type="checkbox"
+                            id="showPassword"
+                        >
+
+                        Show password
+
+                    </label>
+
+
+                </div>
+
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="authMessage"
+                    class="auth-message"
+                ></div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+
+                    Login to Dashboard
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="divider">
+
+                OR
+
+            </div>
+
+
+
+            <div class="auth-footer">
+
+                Don't have an account?
+
+                <a href="register.html">
+
+                    Create Account
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+
+<script>
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const loginForm =
+    document.getElementById("loginForm");
+
+
+const emailInput =
+    document.getElementById("email");
+
+
+const passwordInput =
+    document.getElementById("password");
+
+
+const showPassword =
+    document.getElementById("showPassword");
+
+
+const loginButton =
+    document.getElementById("loginButton");
+
+
+const authMessage =
+    document.getElementById("authMessage");
+
+
+const forgotPassword =
+    document.getElementById("forgotPassword");
+
+
+
+/* =====================================================
+   MESSAGE FUNCTION
+===================================================== */
+
+function showMessage(message, type) {
+
+    authMessage.textContent = message;
+
+    authMessage.className =
+        "auth-message " + type;
+
+}
+
+
+
+function clearMessage() {
+
+    authMessage.textContent = "";
+
+    authMessage.className =
+        "auth-message";
+
+}
+
+
+
+/* =====================================================
+   SHOW / HIDE PASSWORD
+===================================================== */
+
+showPassword.addEventListener(
+    "change",
+    function () {
+
+        if (this.checked) {
+
+            passwordInput.type = "text";
+
+        } else {
+
+            passwordInput.type = "password";
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+loginForm.addEventListener(
+    "submit",
+    async function (event) {
+
+        event.preventDefault();
+
+        clearMessage();
+
+
+        const email =
+            emailInput.value.trim();
+
+        const password =
+            passwordInput.value;
+
+
+        if (!email || !password) {
+
+            showMessage(
+                "Please enter your email and password.",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        loginButton.disabled = true;
+
+        loginButton.textContent =
+            "Signing in...";
+
+
+        try {
+
+
+            /*
+             * Supabase Authentication
+             */
+
+            const { data, error } =
+                await supabaseClient.auth.signInWithPassword({
+
+                    email: email,
+
+                    password: password
+
+                });
+
+
+            if (error) {
+
+                console.error(
+                    "Login error:",
+                    error
+                );
+
+
+                showMessage(
+                    getLoginErrorMessage(error),
+                    "error"
+                );
+
+                return;
+
+            }
+
+
+            if (!data.user) {
+
+                showMessage(
+                    "Login failed. Please try again.",
+                    "error"
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * LOGIN SUCCESS
+             */
+
+            showMessage(
+                "Login successful. Opening dashboard...",
+                "success"
+            );
+
+
+            /*
+             * Small delay so user can
+             * see success message.
+             */
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "dashboard.html";
+
+                },
+                700
+            );
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            showMessage(
+                "Something went wrong. Please try again.",
+                "error"
+            );
+
+
+        } finally {
+
+            loginButton.disabled = false;
+
+            loginButton.textContent =
+                "Login to Dashboard";
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   LOGIN ERROR HANDLER
+===================================================== */
+
+function getLoginErrorMessage(error) {
+
+    const message =
+        error?.message?.toLowerCase() || "";
+
+
+    if (
+        message.includes("invalid login credentials")
+    ) {
+
+        return "Incorrect email or password.";
+
+    }
+
+
+    if (
+        message.includes("email not confirmed")
+    ) {
+
+        return "Please verify your email before logging in.";
+
+    }
+
+
+    if (
+        message.includes("too many requests")
+    ) {
+
+        return "Too many login attempts. Please wait and try again.";
+
+    }
+
+
+    return (
+        error?.message ||
+        "Unable to login. Please try again."
+    );
+
+}
+
+
+
+/* =====================================================
+   FORGOT PASSWORD
+===================================================== */
+
+forgotPassword.addEventListener(
+    "click",
+    async function (event) {
+
+        event.preventDefault();
+
+        clearMessage();
+
+
+        const email =
+            emailInput.value.trim();
+
+
+        if (!email) {
+
+            showMessage(
+                "Enter your email address first, then click Forgot Password.",
+                "error"
+            );
+
+            emailInput.focus();
+
+            return;
+
+        }
+
+
+        try {
+
+
+            forgotPassword.textContent =
+                "Sending...";
+
+
+            const { error } =
+                await supabaseClient.auth.resetPasswordForEmail(
+                    email,
+                    {
+                        redirectTo:
+                            window.location.origin +
+                            "/reset-password.html"
+                    }
+                );
+
+
+            if (error) {
+
+                showMessage(
+                    error.message,
+                    "error"
+                );
+
+                return;
+
+            }
+
+
+            showMessage(
+                "Password reset link has been sent to your email.",
+                "success"
+            );
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            showMessage(
+                "Unable to send password reset email.",
+                "error"
+            );
+
+
+        } finally {
+
+            forgotPassword.textContent =
+                "Forgot Password?";
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

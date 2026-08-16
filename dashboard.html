@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | NCLEX Result</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                N
+            </div>
+
+            <div class="logo-text">
+                <h2>NCLEX</h2>
+                <span>RESULT</span>
+            </div>
+
+        </div>
+
+
+        <!-- STUDENT -->
+
+        <div class="student-mini">
+
+            <div class="student-avatar" id="sidebarAvatar">
+                S
+            </div>
+
+            <div class="student-info">
+
+                <strong id="sidebarName">
+                    Student
+                </strong>
+
+                <small>
+                    Student
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="menu-item active">
+
+                <span class="menu-icon">
+                    ⌂
+                </span>
+
+                <p>
+                    Dashboard
+                </p>
+
+            </a>
+
+
+            <a href="course.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ▣
+                </span>
+
+                <p>
+                    My Courses
+                </p>
+
+            </a>
+
+
+            <a href="grade.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ★
+                </span>
+
+                <p>
+                    Results
+                </p>
+
+            </a>
+
+
+            <a href="progress.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ◔
+                </span>
+
+                <p>
+                    Attendance
+                </p>
+
+            </a>
+
+
+            <a href="assignment.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ☑
+                </span>
+
+                <p>
+                    Assignments
+                </p>
+
+            </a>
+
+
+            <a href="study-material.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ▤
+                </span>
+
+                <p>
+                    Study Material
+                </p>
+
+            </a>
+
+
+            <a href="schedule.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ▦
+                </span>
+
+                <p>
+                    Schedule
+                </p>
+
+            </a>
+
+
+            <a href="profile.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ♙
+                </span>
+
+                <p>
+                    Profile
+                </p>
+
+            </a>
+
+        </nav>
+
+
+        <!-- BOTTOM MENU -->
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ⚙
+                </span>
+
+                <p>
+                    Settings
+                </p>
+
+            </a>
+
+
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-logo">
+
+                NCLEX
+                <span>
+                    RESULT
+                </span>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button
+                    type="button"
+                    class="notification-btn"
+                    id="notificationBtn"
+                >
+
+                    ♧
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div
+                        class="user-avatar"
+                        id="userAvatar"
+                    >
+                        S
+                    </div>
+
+
+                    <div class="user-info">
+
+                        <strong id="userName">
+                            Student
+                        </strong>
+
+                        <small>
+                            Student
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= DASHBOARD CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-section">
+
+                <div>
+
+                    <span class="welcome-label">
+                        STUDENT DASHBOARD
+                    </span>
+
+
+                    <h1>
+
+                        Welcome back,
+
+                        <span id="welcomeName">
+                            Student
+                        </span>
+
+                        👋
+
+                    </h1>
+
+
+                    <p>
+                        Here is your academic overview and latest updates.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="course.html"
+                    class="primary-btn"
+                >
+                    View My Courses
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= STATS ================= -->
+
+            <div class="stats-grid">
+
+
+                <!-- COURSES -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Enrolled Courses
+                        </span>
+
+                        <strong>
+                            06
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COMPLETED -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ATTENDANCE -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        %
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Attendance
+                        </span>
+
+                        <strong>
+                            92%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ★
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Average Result
+                        </span>
+
+                        <strong>
+                            87%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= MAIN GRID ================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- COURSES CARD -->
+
+                <div class="dashboard-card courses-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                ACADEMIC
+                            </span>
+
+                            <h2>
+                                My Courses
+                            </h2>
+
+                        </div>
+
+
+                        <a href="course.html">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="course-list">
+
+
+                        <!-- COURSE 1 -->
+
+                        <div class="course-row">
+
+                            <div class="course-icon">
+                                NC
+                            </div>
+
+
+                            <div class="course-info">
+
+                                <strong>
+                                    NCLEX-RN Preparation
+                                </strong>
+
+                                <span>
+                                    Nursing Preparation
+                                </span>
+
+                            </div>
+
+
+                            <div class="course-progress">
+
+                                <strong>
+                                    82%
+                                </strong>
+
+                                <div>
+                                    <i style="width:82%"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- COURSE 2 -->
+
+                        <div class="course-row">
+
+                            <div class="course-icon purple-bg">
+                                PH
+                            </div>
+
+
+                            <div class="course-info">
+
+                                <strong>
+                                    Pharmacology
+                                </strong>
+
+                                <span>
+                                    Medical Sciences
+                                </span>
+
+                            </div>
+
+
+                            <div class="course-progress">
+
+                                <strong>
+                                    68%
+                                </strong>
+
+                                <div>
+                                    <i style="width:68%"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- COURSE 3 -->
+
+                        <div class="course-row">
+
+                            <div class="course-icon green-bg">
+                                MN
+                            </div>
+
+
+                            <div class="course-info">
+
+                                <strong>
+                                    Medical Nursing
+                                </strong>
+
+                                <span>
+                                    Nursing Practice
+                                </span>
+
+                            </div>
+
+
+                            <div class="course-progress">
+
+                                <strong>
+                                    91%
+                                </strong>
+
+                                <div>
+                                    <i style="width:91%"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ATTENDANCE -->
+
+                <div class="dashboard-card attendance-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                ATTENDANCE
+                            </span>
+
+                            <h2>
+                                Attendance
+                            </h2>
+
+                        </div>
+
+
+                        <a href="progress.html">
+                            Details →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="attendance-circle">
+
+                        <div class="circle-inner">
+
+                            <strong>
+                                92%
+                            </strong>
+
+                            <span>
+                                Present
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="attendance-details">
+
+
+                        <div>
+
+                            <span>
+                                Present
+                            </span>
+
+                            <strong>
+                                46
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Absent
+                            </span>
+
+                            <strong>
+                                04
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong>
+                                50
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= BOTTOM GRID ================= -->
+
+            <div class="bottom-grid">
+
+
+                <!-- SCHEDULE -->
+
+                <div class="dashboard-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                SCHEDULE
+                            </span>
+
+                            <h2>
+                                Upcoming Classes
+                            </h2>
+
+                        </div>
+
+
+                        <a href="schedule.html">
+                            Full Schedule →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="schedule-list">
+
+
+                        <div class="schedule-item">
+
+                            <div class="date-box">
+
+                                <strong>
+                                    18
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+
+                            </div>
+
+
+                            <div class="schedule-info">
+
+                                <strong>
+                                    NCLEX Practice Test
+                                </strong>
+
+                                <span>
+                                    10:00 AM — 11:30 AM
+                                </span>
+
+                            </div>
+
+
+                            <span class="online">
+                                Online
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="schedule-item">
+
+                            <div class="date-box">
+
+                                <strong>
+                                    20
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+
+                            </div>
+
+
+                            <div class="schedule-info">
+
+                                <strong>
+                                    Pharmacology Class
+                                </strong>
+
+                                <span>
+                                    02:00 PM — 03:30 PM
+                                </span>
+
+                            </div>
+
+
+                            <span class="online">
+                                Online
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="schedule-item">
+
+                            <div class="date-box">
+
+                                <strong>
+                                    22
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+
+                            </div>
+
+
+                            <div class="schedule-info">
+
+                                <strong>
+                                    Medical Nursing
+                                </strong>
+
+                                <span>
+                                    11:00 AM — 12:30 PM
+                                </span>
+
+                            </div>
+
+
+                            <span class="online">
+                                Online
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ASSIGNMENTS -->
+
+                <div class="dashboard-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                TASKS
+                            </span>
+
+                            <h2>
+                                Assignments
+                            </h2>
+
+                        </div>
+
+
+                        <a href="assignment.html">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="assignment-list">
+
+
+                        <div class="assignment">
+
+                            <div class="assignment-icon">
+                                !
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    NCLEX Mock Test #04
+                                </strong>
+
+                                <span>
+                                    Due Aug 20, 2026
+                                </span>
+
+                            </div>
+
+
+                            <span class="pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="assignment">
+
+                            <div class="assignment-icon completed">
+                                ✓
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Pharmacology Quiz
+                                </strong>
+
+                                <span>
+                                    Submitted Aug 15, 2026
+                                </span>
+
+                            </div>
+
+
+                            <span class="done">
+                                Done
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= NOTICE ================= -->
+
+            <div class="notice-box">
+
+                <div class="notice-icon">
+                    !
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Important Notice
+                    </strong>
+
+
+                    <p>
+                        Your next NCLEX preparation mock test is
+                        scheduled for August 20, 2026. Please complete
+                        your pending assignments before the test.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
