@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NCLEX Result | Student Management System</title>
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/login.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-box">N</span>
+                NCLEX<span class="logo-light">Result</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="#features">Features</a>
+
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+
+                <a href="login.html" class="login-link">
+                    Login
+                </a>
+
+                <a href="register.html" class="nav-button">
+                    Get Started
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        Modern Student Management Platform
+                    </span>
+
+                    <h1>
+                        Manage Your
+                        <span>Academic Journey</span>
+                        Smarter.
+                    </h1>
+
+                    <p>
+                        NCLEX Result is a modern student management
+                        platform designed to help students manage
+                        courses, results, attendance, assignments and
+                        study materials from one simple dashboard.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="register.html" class="primary-button">
+                            Create Account
+                        </a>
+
+                        <a href="login.html" class="secondary-button">
+                            Student Login
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-stats">
+
+                        <div>
+                            <strong>1000+</strong>
+                            <span>Students</span>
+                        </div>
+
+                        <div>
+                            <strong>50+</strong>
+                            <span>Courses</span>
+                        </div>
+
+                        <div>
+                            <strong>99%</strong>
+                            <span>Platform Uptime</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD PREVIEW -->
+
+                <div class="dashboard-preview">
+
+                    <div class="preview-header">
+
+                        <div class="preview-logo">
+                            NCLEX Result
+                        </div>
+
+                        <div class="preview-user">
+                            👤
+                        </div>
+
+                    </div>
+
+
+                    <div class="preview-layout">
+
+                        <aside class="preview-sidebar">
+
+                            <div class="preview-menu active">
+                                🏠 Dashboard
+                            </div>
+
+                            <div class="preview-menu">
+                                📚 My Courses
+                            </div>
+
+                            <div class="preview-menu">
+                                📊 Results
+                            </div>
+
+                            <div class="preview-menu">
+                                🕐 Attendance
+                            </div>
+
+                            <div class="preview-menu">
+                                📝 Assignments
+                            </div>
+
+                            <div class="preview-menu">
+                                📖 Study Material
+                            </div>
+
+                            <div class="preview-menu">
+                                👤 Profile
+                            </div>
+
+                            <div class="preview-menu">
+                                ⚙️ Settings
+                            </div>
+
+                        </aside>
+
+
+                        <div class="preview-content">
+
+                            <span class="small-text">
+                                STUDENT DASHBOARD
+                            </span>
+
+                            <h3>
+                                Welcome Back!
+                            </h3>
+
+                            <p class="muted">
+                                Here's your academic overview.
+                            </p>
+
+
+                            <div class="preview-cards">
+
+                                <div class="preview-card">
+
+                                    <span>
+                                        My Courses
+                                    </span>
+
+                                    <strong>
+                                        08
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="preview-card">
+
+                                    <span>
+                                        Results
+                                    </span>
+
+                                    <strong>
+                                        92%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="preview-card">
+
+                                    <span>
+                                        Attendance
+                                    </span>
+
+                                    <strong>
+                                        87%
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-box">
+
+                                <div class="progress-title">
+
+                                    <span>
+                                        Course Progress
+                                    </span>
+
+                                    <strong>
+                                        78%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="progress-bar">
+
+                                    <div></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features" id="features">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        PLATFORM FEATURES
+                    </span>
+
+                    <h2>
+                        Everything You Need
+                        In One Place
+                    </h2>
+
+                    <p>
+                        Manage your complete academic activity
+                        through a simple and powerful student portal.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📚
+                        </div>
+
+                        <h3>
+                            My Courses
+                        </h3>
+
+                        <p>
+                            View enrolled courses, course details
+                            and your learning progress.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📊
+                        </div>
+
+                        <h3>
+                            Results
+                        </h3>
+
+                        <p>
+                            Check your examination results and
+                            academic performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🕐
+                        </div>
+
+                        <h3>
+                            Attendance
+                        </h3>
+
+                        <p>
+                            Track your daily attendance and
+                            attendance percentage.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            Assignments
+                        </h3>
+
+                        <p>
+                            View assignments, deadlines and
+                            submission status.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📖
+                        </div>
+
+                        <h3>
+                            Study Material
+                        </h3>
+
+                        <p>
+                            Access notes, PDFs and other
+                            learning resources.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            👤
+                        </div>
+
+                        <h3>
+                            Student Profile
+                        </h3>
+
+                        <p>
+                            Manage your personal and academic
+                            information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Settings
+                        </h3>
+
+                        <p>
+                            Manage account preferences and
+                            security settings.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🔐
+                        </div>
+
+                        <h3>
+                            Secure Login
+                        </h3>
+
+                        <p>
+                            Secure authentication for your
+                            student account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about" id="about">
+
+            <div class="container about-container">
+
+                <div>
+
+                    <span class="section-label">
+                        ABOUT NCLEX RESULT
+                    </span>
+
+                    <h2>
+                        A Simple Platform For
+                        Modern Students
+                    </h2>
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <p>
+                        NCLEX Result provides students with a
+                        centralized platform where they can
+                        access important academic information.
+                    </p>
+
+                    <p>
+                        From courses and examination results
+                        to attendance, assignments and study
+                        materials, everything is organized
+                        inside one dashboard.
+                    </p>
+
+                    <p>
+                        The platform is designed to be fast,
+                        responsive and easy to use on desktop,
+                        tablet and mobile devices.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta" id="contact">
+
+            <div class="container cta-container">
+
+                <div>
+
+                    <span>
+                        START YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Ready to manage your studies?
+                    </h2>
+
+                </div>
+
+
+                <a href="register.html" class="white-button">
+                    Create Your Account
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <div>
+
+                <a href="#" class="logo footer-logo">
+
+                    <span class="logo-box">
+                        N
+                    </span>
+
+                    NCLEX
+                    <span class="logo-light">
+                        Result
+                    </span>
+
+                </a>
+
+                <p>
+                    Modern student management platform.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 NCLEX Result. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
