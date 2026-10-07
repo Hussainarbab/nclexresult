@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your NCLEX course progress, study activity, and achievements.">
+    <title>Progress | NCLEX Result</title>
+    <link rel="stylesheet" href="css/progress.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-box" aria-hidden="true">N</div>
+            <div>
+                <strong>NCLEX</strong>
+                <span>RESULT</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main navigation">
+            <p class="menu-title">MAIN MENU</p>
+            <a href="dashboard.html"><span aria-hidden="true">⌂</span>Dashboard</a>
+            <a href="course.html"><span aria-hidden="true">▣</span>My Courses</a>
+            <a href="grade.html"><span aria-hidden="true">★</span>Grades</a>
+            <a href="progress.html" class="active" aria-current="page"><span aria-hidden="true">◔</span>Progress</a>
+            <a href="attendance.html"><span aria-hidden="true">✓</span>Attendance</a>
+            <a href="assignments.html"><span aria-hidden="true">☑</span>Assignments</a>
+            <a href="study-material.html"><span aria-hidden="true">▤</span>Study Material</a>
+            <a href="schedule.html"><span aria-hidden="true">▦</span>Schedule</a>
+
+            <p class="menu-title">ACCOUNT</p>
+            <a href="profile.html"><span aria-hidden="true">◯</span>Profile</a>
+            <a href="settings.html"><span aria-hidden="true">⚙</span>Settings</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="student-mini">
+                <div class="avatar" id="sidebarAvatar" aria-hidden="true">S</div>
+                <div>
+                    <strong id="sidebarName">Student</strong>
+                    <span>Student</span>
+                </div>
+            </div>
+            <button class="logout-btn" id="logoutBtn" type="button">↪ Logout</button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>My Progress</h1>
+                <p>Keep track of your learning journey and NCLEX preparation.</p>
+            </div>
+            <div class="top-actions">
+                <button class="notification" id="notificationBtn" type="button" aria-label="Notifications">
+                    🔔<span aria-hidden="true"></span>
+                </button>
+                <div class="profile-top">
+                    <div class="avatar small" id="userAvatar" aria-hidden="true">S</div>
+                    <div>
+                        <strong id="userName">Student</strong>
+                        <small>Student</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="stats-grid" aria-label="Progress overview">
+            <article class="stat-card">
+                <div class="stat-icon blue" aria-hidden="true">▣</div>
+                <div><span>Courses in progress</span><strong>4</strong><small>Keep up the great work</small></div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-icon purple" aria-hidden="true">✓</div>
+                <div><span>Topics completed</span><strong>28</strong><small>Across all your courses</small></div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-icon green" aria-hidden="true">◷</div>
+                <div><span>Study hours</span><strong>36.5</strong><small>This month</small></div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-icon orange" aria-hidden="true">↗</div>
+                <div><span>Average progress</span><strong>68%</strong><small>Across active courses</small></div>
+            </article>
+        </section>
+
+        <section class="content-card" aria-labelledby="course-progress-heading">
+            <div class="card-header">
+                <div>
+                    <h2 id="course-progress-heading">Course Progress</h2>
+                    <p>See how far you have progressed in each course.</p>
+                </div>
+                <select id="progress-period" name="period" aria-label="Progress period">
+                    <option>This semester</option>
+                    <option>This month</option>
+                    <option>All time</option>
+                </select>
+            </div>
+
+            <div class="course-list">
+                <article class="course-progress">
+                    <div class="course-info">
+                        <div class="course-icon blue-bg" aria-hidden="true">AN</div>
+                        <div><h3>Adult Nursing</h3><p>NCLEX-RN Preparation</p></div>
+                    </div>
+                    <div>
+                        <div class="progress-top"><span>Course completion</span><strong>82%</strong></div>
+                        <div class="progress-bar" role="progressbar" aria-label="Adult Nursing completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82"><div class="progress-fill blue-fill" style="width: 82%"></div></div>
+                    </div>
+                    <div class="course-meta"><span>18 of 22 topics</span><span class="in-progress">In progress</span></div>
+                </article>
+
+                <article class="course-progress">
+                    <div class="course-info">
+                        <div class="course-icon purple-bg" aria-hidden="true">PH</div>
+                        <div><h3>Pharmacology</h3><p>NCLEX-RN Preparation</p></div>
+                    </div>
+                    <div>
+                        <div class="progress-top"><span>Course completion</span><strong>65%</strong></div>
+                        <div class="progress-bar" role="progressbar" aria-label="Pharmacology completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><div class="progress-fill purple-fill" style="width: 65%"></div></div>
+                    </div>
+                    <div class="course-meta"><span>13 of 20 topics</span><span class="in-progress">In progress</span></div>
+                </article>
+
+                <article class="course-progress">
+                    <div class="course-info">
+                        <div class="course-icon green-bg" aria-hidden="true">MA</div>
+                        <div><h3>Maternal &amp; Newborn</h3><p>NCLEX-RN Preparation</p></div>
+                    </div>
+                    <div>
+                        <div class="progress-top"><span>Course completion</span><strong>74%</strong></div>
+                        <div class="progress-bar" role="progressbar" aria-label="Maternal and Newborn completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74"><div class="progress-fill green-fill" style="width: 74%"></div></div>
+                    </div>
+                    <div class="course-meta"><span>14 of 19 topics</span><span class="in-progress">In progress</span></div>
+                </article>
+
+                <article class="course-progress">
+                    <div class="course-info">
+                        <div class="course-icon orange-bg" aria-hidden="true">PS</div>
+                        <div><h3>Psychiatric Nursing</h3><p>NCLEX-RN Preparation</p></div>
+                    </div>
+                    <div>
+                        <div class="progress-top"><span>Course completion</span><strong>52%</strong></div>
+                        <div class="progress-bar" role="progressbar" aria-label="Psychiatric Nursing completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="52"><div class="progress-fill orange-fill" style="width: 52%"></div></div>
+                    </div>
+                    <div class="course-meta"><span>11 of 21 topics</span><span class="in-progress">In progress</span></div>
+                </article>
+            </div>
+        </section>
+
+        <div class="lower-grid">
+            <section class="content-card" aria-labelledby="activity-heading">
+                <div class="card-header">
+                    <div>
+                        <h2 id="activity-heading">Study Activity</h2>
+                        <p>Your study hours over the last seven days.</p>
+                    </div>
+                </div>
+                <div class="activity-chart" role="img" aria-label="Study hours this week: Monday 2 hours, Tuesday 3 hours, Wednesday 1.5 hours, Thursday 4 hours, Friday 2.5 hours, Saturday 5 hours, Sunday 3 hours.">
+                    <div class="chart-value">21 hrs <span>this week</span></div>
+                    <div class="chart-bars" aria-hidden="true">
+                        <div class="bar-item"><div class="bar" style="height: 40%"></div><span>Mon</span></div>
+                        <div class="bar-item"><div class="bar" style="height: 60%"></div><span>Tue</span></div>
+                        <div class="bar-item"><div class="bar" style="height: 30%"></div><span>Wed</span></div>
+                        <div class="bar-item"><div class="bar" style="height: 80%"></div><span>Thu</span></div>
+                        <div class="bar-item"><div class="bar" style="height: 50%"></div><span>Fri</span></div>
+                        <div class="bar-item"><div class="bar" style="height: 100%"></div><span>Sat</span></div>
+                        <div class="bar-item"><div class="bar" style="height: 60%"></div><span>Sun</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card" aria-labelledby="achievements-heading">
+                <div class="card-header">
+                    <div>
+                        <h2 id="achievements-heading">Recent Achievements</h2>
+                        <p>Milestones from your learning journey.</p>
+                    </div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-icon" aria-hidden="true">🏆</div>
+                    <div><strong>Consistent Learner</strong><span>Studied 5 days in a row</span></div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-icon" aria-hidden="true">📚</div>
+                    <div><strong>Topic Explorer</strong><span>Completed 25 study topics</span></div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-icon" aria-hidden="true">🎯</div>
+                    <div><strong>Practice Pro</strong><span>Scored 85% on a practice quiz</span></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
