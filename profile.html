@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - NCLEX Result</title>
+
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+
+<div class="profile-page">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                N
+            </div>
+
+            <div>
+                <strong>NCLEX</strong>
+                <span>RESULT</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="course.html">
+                <span>📚</span>
+                My Courses
+            </a>
+
+            <a href="grade.html">
+                <span>📊</span>
+                Grades
+            </a>
+
+            <a href="progress.html">
+                <span>📈</span>
+                Progress
+            </a>
+
+            <a href="attendance.html">
+                <span>✓</span>
+                Attendance
+            </a>
+
+            <a href="assignment.html">
+                <span>📝</span>
+                Assignments
+            </a>
+
+            <a href="study-material.html">
+                <span>📖</span>
+                Study Material
+            </a>
+
+            <a href="profile.html" class="active">
+                <span>👤</span>
+                Profile
+            </a>
+
+            <a href="settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="logout-box">
+
+            <button onclick="logout()">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>My Profile</h1>
+
+                <p>
+                    View and manage your personal information
+                </p>
+
+            </div>
+
+
+            <div class="user-area">
+
+                <div class="notification">
+
+                    🔔
+
+                    <span>2</span>
+
+                </div>
+
+
+                <div class="user">
+
+                    <div class="avatar">
+                        HA
+                    </div>
+
+                    <div>
+
+                        <strong id="topUserName">
+                            Hussain Abbas
+                        </strong>
+
+                        <small>
+                            Student
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PROFILE CONTENT ================= -->
+
+        <section class="profile-container">
+
+
+            <!-- PROFILE HEADER CARD -->
+
+            <div class="profile-header-card">
+
+                <div class="profile-cover"></div>
+
+
+                <div class="profile-info">
+
+                    <div class="profile-avatar">
+                        HA
+                    </div>
+
+
+                    <div class="profile-name">
+
+                        <h2 id="profileName">
+                            Hussain Abbas
+                        </h2>
+
+                        <p>
+                            NCLEX Student
+                        </p>
+
+                        <span class="student-status">
+                            ● Active Student
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="edit-button"
+                        onclick="editProfile()"
+                    >
+                        ✏ Edit Profile
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PERSONAL INFORMATION ================= -->
+
+            <div class="profile-grid">
+
+
+                <div class="profile-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Personal Information
+                            </h3>
+
+                            <p>
+                                Your basic personal details
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="information-list">
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="fullName">
+                                Hussain Abbas
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Email Address
+                            </span>
+
+                            <strong id="email">
+                                hussain@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Phone Number
+                            </span>
+
+                            <strong>
+                                +92 300 0000000
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Gender
+                            </span>
+
+                            <strong>
+                                Male
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Date of Birth
+                            </span>
+
+                            <strong>
+                                15 January 2000
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Country
+                            </span>
+
+                            <strong>
+                                Pakistan
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= STUDENT INFORMATION ================= -->
+
+                <div class="profile-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            🎓
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Student Information
+                            </h3>
+
+                            <p>
+                                Your academic information
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="information-list">
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Student ID
+                            </span>
+
+                            <strong>
+                                NXR-2026-001
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Program
+                            </span>
+
+                            <strong>
+                                NCLEX Preparation
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Enrollment Date
+                            </span>
+
+                            <strong>
+                                January 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Total Courses
+                            </span>
+
+                            <strong>
+                                6 Courses
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Completed Courses
+                            </span>
+
+                            <strong>
+                                2 Courses
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-item">
+
+                            <span>
+                                Overall Progress
+                            </span>
+
+                            <strong class="blue-text">
+                                78%
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CONTACT & ACCOUNT ================= -->
+
+            <div class="profile-grid">
+
+
+                <!-- CONTACT -->
+
+                <div class="profile-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            📞
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Contact Information
+                            </h3>
+
+                            <p>
+                                Your contact details
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-box">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong>
+                                hussain@example.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-box">
+
+                        <div class="contact-icon">
+                            ☎
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong>
+                                +92 300 0000000
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ACCOUNT -->
+
+                <div class="profile-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            🔐
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Account Information
+                            </h3>
+
+                            <p>
+                                Account status and security
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-row">
+
+                        <span>
+                            Account Status
+                        </span>
+
+                        <strong class="active-status">
+                            Active
+                        </strong>
+
+                    </div>
+
+
+                    <div class="account-row">
+
+                        <span>
+                            Account Type
+                        </span>
+
+                        <strong>
+                            Student
+                        </strong>
+
+                    </div>
+
+
+                    <div class="account-row">
+
+                        <span>
+                            Member Since
+                        </span>
+
+                        <strong>
+                            January 2026
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="settings.html"
+                        class="security-button"
+                    >
+                        ⚙ Account Settings
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= QUICK STATS ================= -->
+
+            <div class="stats-section">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            6
+                        </strong>
+
+                        <span>
+                            Total Courses
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            78%
+                        </strong>
+
+                        <span>
+                            Progress
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            92%
+                        </strong>
+
+                        <span>
+                            Attendance
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <span>
+                            Assignments
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+function editProfile() {
+
+    window.location.href = "settings.html";
+
+}
+
+
+function logout() {
+
+    const confirmLogout =
+        confirm("Are you sure you want to logout?");
+
+    if (confirmLogout) {
+
+        localStorage.removeItem("userName");
+
+        window.location.href = "../login.html";
+
+    }
+
+}
+
+
+/* Load saved name */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const savedName =
+        localStorage.getItem("userName");
+
+    if (savedName) {
+
+        document.getElementById("profileName").textContent =
+            savedName;
+
+        document.getElementById("fullName").textContent =
+            savedName;
+
+        document.getElementById("topUserName").textContent =
+            savedName;
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
